@@ -2,8 +2,13 @@ package org.universal.tokenizer;
 
 public class LiteralToken extends Token {
     private String value;
-    public LiteralToken(String value) {
+
+    public LiteralToken(String value, int indexInCode) {
+        super(indexInCode);
         this.value = value;
+    }
+    public LiteralToken(String value) {
+        this(value, -1);
     }
 
     @Override
@@ -14,10 +19,5 @@ public class LiteralToken extends Token {
     @Override
     public String getValue() {
         return value;
-    }
-
-    @Override
-    public String toString() {
-        return "LiteralToken{" + value + "}";
     }
 }

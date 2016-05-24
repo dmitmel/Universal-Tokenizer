@@ -2,8 +2,12 @@ package org.universal.tokenizer;
 
 public class SingleCharToken extends Token {
     private char value;
-    public SingleCharToken(char value) {
+    public SingleCharToken(char value, int indexInCode) {
+        super(indexInCode);
         this.value = value;
+    }
+    public SingleCharToken(char value) {
+        this(value, -1);
     }
 
     @Override
@@ -14,11 +18,5 @@ public class SingleCharToken extends Token {
     @Override
     public Character getValue() {
         return value;
-    }
-
-
-    @Override
-    public String toString() {
-        return "SingleCharToken{" + value + "}";
     }
 }

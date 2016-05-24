@@ -23,4 +23,14 @@ public class Strings extends TokenTester {
                 "\"1\"/*multiline comment \"2\"*/\"3\"// single line comment \"4\"");
         assertTokensEqual(tokens, new StringToken("\"1\""), new StringToken("\"3\""));
     }
+
+    @Test(expected = NoClosingQuoteInStringException.class)
+    public void testParsingStringWithMissingClosingQuote() {
+        new ClassicTokenizer().toTokenList("\"str");
+    }
+
+    @Test(expected = NoEscapedCharAfterESCException.class)
+    public void testParsingStringWithNoCharAfterEsc() {
+        new ClassicTokenizer().toTokenList("\"str\\");
+    }
 }

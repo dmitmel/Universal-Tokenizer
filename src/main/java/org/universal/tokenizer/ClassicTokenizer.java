@@ -3,58 +3,20 @@ package org.universal.tokenizer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassicTokenizer implements Tokenizer {
-
+/**
+ * Class for tokenizing classic (modern) language code, but not Forth.
+ */
+public class ClassicTokenizer extends Tokenizer {
     private StringBuilder tokenBuilder = new StringBuilder(0);
     private State state = State.NONE;
     private List<Token> tokens = new ArrayList<>(0);
-    private boolean charInStringIsEscaped = false;
     private String code;
     private int i = 0;
-
-    private String singleLineCommentSequence = "//";
-    @Override
-    public String getSingleLineCommentSequence() {
-        return singleLineCommentSequence;
-    }
-    @Override
-    public void setSingleLineCommentSequence(String singleLineCommentSequence) {
-        assert singleLineCommentSequence.length() > 0 :
-                "Length of Tokenizer#singleLineCommentSequence must be greater than zero";
-        assert !singleLineCommentSequence.equals(multilineCommentStart) :
-                "Tokenizer#singleLineCommentSequence mustn\'t equal Tokenizer#multilineCommentStart";
-        this.singleLineCommentSequence = singleLineCommentSequence;
-    }
-
-    private String multilineCommentStart = "/*";
-    @Override
-    public String getMultilineCommentStart() {
-        return multilineCommentStart;
-    }
-    @Override
-    public void setMultilineCommentStart(String multilineCommentStart) {
-        assert multilineCommentStart.length() > 0 :
-                "Length of Tokenizer#multilineCommentStart must be greater than zero";
-        assert !singleLineCommentSequence.equals(multilineCommentStart) :
-                "Tokenizer#singleLineCommentSequence mustn\'t equal Tokenizer#multilineCommentStart";
-        this.multilineCommentStart = multilineCommentStart;
-    }
-
-    private String multilineCommentEnd = "*/";
-    @Override
-    public String getMultilineCommentEnd() {
-        return multilineCommentEnd;
-    }
-    @Override
-    public void setMultilineCommentEnd(String multilineCommentEnd) {
-        assert multilineCommentEnd.length() > 0 :
-                "Length of Tokenizer#multilineCommentEnd must be greater than zero";
-        this.multilineCommentEnd = multilineCommentEnd;
-    }
 
     @Override
     public List<Token> toTokenList(String code) {
         resetFields(code);
+        checkFields();
 
         for (i = 0; i < code.length(); i++) {
             char c = code.charAt(i);
@@ -88,6 +50,7 @@ public class ClassicTokenizer implements Tokenizer {
                         processNumberChar(c);
                         break;
 
+                    case ESCAPED_STRING_CHAR:
                     case STRING:
                         processStringChar(c);
                         break;
@@ -100,13 +63,15 @@ public class ClassicTokenizer implements Tokenizer {
 
         if (state != State.NONE) {
             switch (state) {
+                case ESCAPED_STRING_CHAR:
+                    throw new NoEscapedCharAfterESCException();
                 case STRING:
-                    throw new TokenParseException("Missing closing quote for string");
+                    throw new NoClosingQuoteInStringException();
                 case NUMBER:
-                    tokens.add(new NumberToken(tokenBuilder.toString()));
+                    tokens.add(new NumberToken(tokenBuilder.toString(), i));
                     break;
                 case LITERAL:
-                    tokens.add(new LiteralToken(tokenBuilder.toString()));
+                    tokens.add(new LiteralToken(tokenBuilder.toString(), i));
                     break;
             }
         }
@@ -114,14 +79,25 @@ public class ClassicTokenizer implements Tokenizer {
         return tokens;
     }
 
+    private void checkFields() {
+        assert singleLineCommentSequence.length() > 0 :
+                "Length of Tokenizer#singleLineCommentSequence must be greater than zero";
+        assert multilineCommentStart.length() > 0 :
+                "Length of Tokenizer#multilineCommentStart must be greater than zero";
+        assert !singleLineCommentSequence.equals(multilineCommentStart) :
+                "Tokenizer#singleLineCommentSequence mustn\'t equal Tokenizer#multilineCommentStart";
+        assert multilineCommentEnd.length() > 0 :
+                "Length of Tokenizer#multilineCommentEnd must be greater than zero";
+    }
+
     private void processStringChar(char c) {
-        if (c == '\\' && !charInStringIsEscaped) {
-            charInStringIsEscaped = true;
+        if (c == '\\' && state != State.ESCAPED_STRING_CHAR) {
+            state = State.ESCAPED_STRING_CHAR;
         } else {
-            if (!charInStringIsEscaped && c == '\"') {
+            if (state != State.ESCAPED_STRING_CHAR && c == '\"') {
                 tokenBuilder.append(c);
-                addTokenInList(new StringToken(tokenBuilder.toString()));
-            } else if (charInStringIsEscaped) {
+                addTokenInList(new StringToken(tokenBuilder.toString(), i));
+            } else if (state == State.ESCAPED_STRING_CHAR) {
                 processEscapedCharInString(c);
             } else
                 tokenBuilder.append(c);
@@ -149,17 +125,17 @@ public class ClassicTokenizer implements Tokenizer {
     }
 
     private void processSingleChar(char c) {
-        addTokenInList(new SingleCharToken(c));
+        addTokenInList(new SingleCharToken(c, i));
     }
 
     private void processLiteralChar(char c) {
         if (SPACERS.contains(c)) {
-            addTokenInList(new LiteralToken(tokenBuilder.toString()));
+            addTokenInList(new LiteralToken(tokenBuilder.toString(), i));
         } else if (LETTERS.contains(c) || NUMBERS.contains(c) || c == '_') {
             tokenBuilder.append(c);
         } else if (c != '\"') {
-            addTokenInList(new LiteralToken(tokenBuilder.toString()));
-            tokens.add(new SingleCharToken(c));
+            addTokenInList(new LiteralToken(tokenBuilder.toString(), i));
+            tokens.add(new SingleCharToken(c, i));
         } else
             throw new UnexpectedTokenException(c);
     }
@@ -167,12 +143,12 @@ public class ClassicTokenizer implements Tokenizer {
     private void processNumberChar(char c) {
 
         if (SPACERS.contains(c)) {
-            addTokenInList(new NumberToken(tokenBuilder.toString()));
+            addTokenInList(new NumberToken(tokenBuilder.toString(), i));
         } else if (NUMBERS.contains(c)) {
             tokenBuilder.append(c);
         } else if (!LETTERS.contains(c)) {
-            addTokenInList(new NumberToken(tokenBuilder.toString()));
-            tokens.add(new SingleCharToken(c));
+            addTokenInList(new NumberToken(tokenBuilder.toString(), i));
+            tokens.add(new SingleCharToken(c, i));
         } else
             throw new UnexpectedTokenException(c);
     }
@@ -180,13 +156,13 @@ public class ClassicTokenizer implements Tokenizer {
     private void addTokenBeforeComment() {
         switch (state) {
             case LITERAL:
-                tokens.add(new LiteralToken(tokenBuilder.toString()));
+                tokens.add(new LiteralToken(tokenBuilder.toString(), i));
                 break;
             case NUMBER:
-                tokens.add(new NumberToken(tokenBuilder.toString()));
+                tokens.add(new NumberToken(tokenBuilder.toString(), i));
                 break;
             case STRING:
-                tokens.add(new StringToken(tokenBuilder.toString()));
+                tokens.add(new StringToken(tokenBuilder.toString(), i));
                 break;
         }
         tokenBuilder = new StringBuilder(0);
@@ -197,7 +173,6 @@ public class ClassicTokenizer implements Tokenizer {
         tokenBuilder = new StringBuilder(0);
         state = State.NONE;
         tokens = new ArrayList<>(0);
-        charInStringIsEscaped = false;
         this.code = code;
     }
 
@@ -255,6 +230,6 @@ public class ClassicTokenizer implements Tokenizer {
     }
 
     private enum State {
-        NONE, LITERAL, NUMBER, STRING, SINGLE_CHAR
+        NONE, LITERAL, NUMBER, STRING, SINGLE_CHAR, ESCAPED_STRING_CHAR
     }
 }
