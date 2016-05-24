@@ -27,7 +27,7 @@ public abstract class Token {
 
     public abstract Type getType();
 
-    enum Type {
+    public enum Type {
         NUMBER, STRING, LITERAL, SINGLE_CHAR
     }
 }
