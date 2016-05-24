@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <project name="Universal-Tokenizer" default="build">
-    <property name="dir.build.root" value="./.build" />
+    <property name="dir.build.root" value="./build" />
     <property name="dir.main.src" value="./src/main/java" />
     <property name="dir.main.bin" value="${dir.build.root}/main/classes" />
     <property name="dir.main.jar" value="${dir.build.root}/jar" />

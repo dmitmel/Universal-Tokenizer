@@ -32,12 +32,12 @@ public class Tokenizer {
             char c = code.charAt(i);
 
             if (singleLineCommentSequence.charAt(0) == c &&
-                    code.regionMatches(i, multilineCommentEnd, 0, singleLineCommentSequence.length())) {
+                    code.regionMatches(i, singleLineCommentSequence, 0, singleLineCommentSequence.length())) {
                 addTokenBeforeComment();
                 skipAllCharsInSingleLineComment();
                 state = State.NONE;
             } else if (multilineCommentStart.charAt(0) == c &&
-                    code.regionMatches(i, multilineCommentEnd, 0, multilineCommentStart.length())) {
+                    code.regionMatches(i, multilineCommentStart, 0, multilineCommentStart.length())) {
                 addTokenBeforeComment();
                 skipAllCharsInMultilineComment();
                 state = State.NONE;
