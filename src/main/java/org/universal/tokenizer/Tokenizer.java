@@ -156,7 +156,7 @@ public class Tokenizer {
 
         if (SPACERS.contains(c)) {
             addTokenInList(new NumberToken(tokenBuilder.toString(), i));
-        } else if (NUMBERS.contains(c)) {
+        } else if (NUMBERS.contains(c) || c == '-') {
             tokenBuilder.append(c);
         } else if (!LETTERS.contains(c)) {
             addTokenInList(new NumberToken(tokenBuilder.toString(), i));

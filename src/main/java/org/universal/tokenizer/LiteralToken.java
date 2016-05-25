@@ -1,6 +1,7 @@
 package org.universal.tokenizer;
 
 public class LiteralToken extends Token {
+
     private String value;
 
     public LiteralToken(String value, int indexInCode) {

@@ -1,7 +1,7 @@
 package org.universal.tokenizer;
 
 public class NumberToken extends Token {
-    private Number value;
+    private double value;
     public NumberToken(String s, int indexInCode) {
         super(indexInCode);
         // TODO: make deciding number type
@@ -17,7 +17,7 @@ public class NumberToken extends Token {
     }
 
     @Override
-    public Number getValue() {
+    public Double getValue() {
         return value;
     }
 }
