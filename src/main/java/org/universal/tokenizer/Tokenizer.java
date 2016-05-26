@@ -8,11 +8,23 @@ import java.util.List;
  * Class for tokenizing classic (modern) language code, but not Forth.
  */
 public class Tokenizer {
-    public static final List<Character> SPACERS = Arrays.asList(' ', '\t', '\n', '\r');
-    public static final List<Character> NUMBERS = Arrays.asList('1', '2', '3', '4', '5', '6', '7', '8', '9', '0');
-    public static final List<Character> LETTERS = Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-            'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F',
-            'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+    public List<Character> spacers = Arrays.asList(' ', '\t', '\n', '\r');
+
+    public static final List<Character> POSSIBLE_NUMBER_STARTERS = Arrays.asList(
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0');
+    public List<Character> possibleCharsInMiddleOfNums = Arrays.asList(
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0');
+
+    public List<Character> possibleStartersOfLiterals = Arrays.asList(
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+            'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+            'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D',
+            'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+            'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+            'Y', 'Z', '_', '$');
+
+    public List<Character> possibleStringStarters = Arrays.asList('\"', '\'');
+    public List<Character> possibleStringStoppers = Arrays.asList('\"', '\'');
 
     private StringBuilder tokenBuilder = new StringBuilder(0);
     private State state = State.NONE;
@@ -42,14 +54,33 @@ public class Tokenizer {
                 skipAllCharsInMultilineComment();
                 state = State.NONE;
             } else {
-                if (!SPACERS.contains(c) && state == State.NONE) {
+                if (!spacers.contains(c) && state == State.NONE) {
                     state = decideCurrentState(c);
                     // The first quote mustn't be added to string using method
                     // {@link Tokenizer#processStringChar(char)}
-                    // Because it will decide that this quote is closing
+                    // Because if {@link Tokenizer#stringStarter} equals {@link Tokenizer#stringStopper}
+                    // it will decide that this quote is closing
                     if (state == State.STRING) {
                         tokenBuilder.append(c);
                         continue;
+                    } else if (state == State.NUMBER) {
+                        Token prevToken = (tokens.size() > 0) ? tokens.get(tokens.size() - 1) : null;
+                        Token prevPrevToken = (tokens.size() > 1) ? tokens.get(tokens.size() - 2) : null;
+
+                        if (prevPrevToken == null) {
+                            if (prevToken != null && prevToken.getType() == Token.Type.SINGLE_CHAR &&
+                                    prevToken.getIndexInCode() + 1 == i && (char) prevToken.getValue() == '-') {
+                                tokens.remove(tokens.size() - 1);
+                                tokenBuilder.append('-');
+                            }
+                        } else if (prevPrevToken.getType() == Token.Type.SINGLE_CHAR &&
+                                (char) prevPrevToken.getValue() == '-') {
+                            if (prevToken != null && prevToken.getType() == Token.Type.SINGLE_CHAR &&
+                                    prevToken.getIndexInCode() + 1 == i && (char) prevToken.getValue() == '-') {
+                                tokens.remove(tokens.size() - 1);
+                                tokenBuilder.append('-');
+                            }
+                        }
                     }
                 }
 
@@ -106,7 +137,7 @@ public class Tokenizer {
         if (c == '\\' && state != State.ESCAPED_STRING_CHAR) {
             state = State.ESCAPED_STRING_CHAR;
         } else {
-            if (state != State.ESCAPED_STRING_CHAR && c == '\"') {
+            if (state != State.ESCAPED_STRING_CHAR && possibleStringStoppers.contains(c)) {
                 tokenBuilder.append(c);
                 addTokenInList(new StringToken(tokenBuilder.toString(), i));
             } else if (state == State.ESCAPED_STRING_CHAR) {
@@ -118,6 +149,9 @@ public class Tokenizer {
 
     private void processEscapedCharInString(char c) {
         switch (c) {
+            case 't':
+                tokenBuilder.append('\t');
+                break;
             case 'n':
                 tokenBuilder.append('\n');
                 break;
@@ -141,11 +175,11 @@ public class Tokenizer {
     }
 
     private void processLiteralChar(char c) {
-        if (SPACERS.contains(c)) {
+        if (spacers.contains(c)) {
             addTokenInList(new LiteralToken(tokenBuilder.toString(), i));
-        } else if (LETTERS.contains(c) || NUMBERS.contains(c) || c == '_') {
+        } else if (possibleStartersOfLiterals.contains(c) || POSSIBLE_NUMBER_STARTERS.contains(c) || c == '_') {
             tokenBuilder.append(c);
-        } else if (c != '\"') {
+        } else if (!possibleStringStarters.contains(c)) {
             addTokenInList(new LiteralToken(tokenBuilder.toString(), i));
             tokens.add(new SingleCharToken(c, i));
         } else
@@ -153,12 +187,11 @@ public class Tokenizer {
     }
 
     private void processNumberChar(char c) {
-
-        if (SPACERS.contains(c)) {
+        if (spacers.contains(c)) {
             addTokenInList(new NumberToken(tokenBuilder.toString(), i));
-        } else if (NUMBERS.contains(c) || c == '-') {
+        } else if (possibleCharsInMiddleOfNums.contains(c)) {
             tokenBuilder.append(c);
-        } else if (!LETTERS.contains(c)) {
+        } else if (!possibleStartersOfLiterals.contains(c)) {
             addTokenInList(new NumberToken(tokenBuilder.toString(), i));
             tokens.add(new SingleCharToken(c, i));
         } else
@@ -215,17 +248,33 @@ public class Tokenizer {
     }
 
     private State decideCurrentState(char c) {
-        if (c == '\"')
-            return State.STRING;
-        else if (LETTERS.contains(c) || c == '_')
-            return State.LITERAL;
-        else if (NUMBERS.contains(c))
-            return State.NUMBER;
-        else // If reached this place, "c" won't be SPACER
-            return State.SINGLE_CHAR;
+        State state;
+
+        if (possibleStringStarters.contains(c)) {
+            state = State.STRING;
+        } else if (possibleStartersOfLiterals.contains(c)) {
+            state = State.LITERAL;
+        } else if (POSSIBLE_NUMBER_STARTERS.contains(c)) {
+            state = State.NUMBER;
+        } else {    // If reached this place, "c" won't be SPACER
+            state = State.SINGLE_CHAR;
+        }
+
+        return state;
     }
 
     private enum State {
-        NONE, LITERAL, NUMBER, STRING, SINGLE_CHAR, ESCAPED_STRING_CHAR
+        /** State is used while reading only {@link #spacers}, and waiting for another lexeme/token. */
+        NONE,
+
+        LITERAL,
+
+        NUMBER,
+
+        STRING,
+
+        SINGLE_CHAR,
+        /** State is used if there's ESC character in string, and waiting for escaped. */
+        ESCAPED_STRING_CHAR
     }
 }

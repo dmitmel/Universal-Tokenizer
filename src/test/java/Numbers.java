@@ -32,4 +32,11 @@ public class Numbers extends TokenTester {
         List<Token> tokens = new Tokenizer().toTokenList("1/*multiline comment 3*/4// single line comment 5");
         assertTokensEqual(tokens, new NumberToken("1"), new NumberToken("4"));
     }
+
+    @Test
+    public void testParsingNegativeNumbers() {
+        List<Token> tokens = new Tokenizer().toTokenList("-1 -5 --2");
+        assertTokensEqual(tokens, new NumberToken("-1"), new SingleCharToken('-'), new NumberToken("5"),
+                new SingleCharToken('-'), new NumberToken("-2"));
+    }
 }
