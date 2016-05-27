@@ -1,4 +1,4 @@
-package org.universal.tokenizer;
+package com.github.dmitmel;
 
 /**
  * This exception can be thrown if string doesn't contain closing quote.

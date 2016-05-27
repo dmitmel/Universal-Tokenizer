@@ -1,4 +1,4 @@
-package org.universal.tokenizer;
+package com.github.dmitmel;
 
 public abstract class Token {
     private int indexInCode;

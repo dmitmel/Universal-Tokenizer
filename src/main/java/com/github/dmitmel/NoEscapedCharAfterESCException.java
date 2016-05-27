@@ -1,4 +1,4 @@
-package org.universal.tokenizer;
+package com.github.dmitmel;
 
 /**
  * This exception can be thrown if there's ESC char ({@code \}), but there're no char to be escaped.

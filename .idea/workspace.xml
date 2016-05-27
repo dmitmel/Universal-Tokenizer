@@ -2,17 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a835dd6c-ba53-4c2b-b98c-1b5ee8e4d80e" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/LiteralToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/LiteralToken.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoClosingQuoteInStringException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoClosingQuoteInStringException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEndingSeqInCommentException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEndingSeqInCommentException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEscapedCharAfterESCException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEscapedCharAfterESCException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NumberToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NumberToken.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/SingleCharToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/SingleCharToken.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/StringToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/StringToken.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Token.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Token.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/TokenParseException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/TokenParseException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/UnexpectedTokenException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/UnexpectedTokenException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0-sources.jar" afterPath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0-sources.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0.jar" afterPath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/LiteralToken.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/LiteralToken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/NumberToken.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/NumberToken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/StringToken.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/StringToken.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$1.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$State.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$State.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/Strings.class" afterPath="$PROJECT_DIR$/build/test/classes/Strings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java" afterPath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Literals.java" afterPath="$PROJECT_DIR$/src/test/java/Literals.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MultilineComments.java" afterPath="$PROJECT_DIR$/src/test/java/MultilineComments.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Numbers.java" afterPath="$PROJECT_DIR$/src/test/java/Numbers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SingleChars.java" afterPath="$PROJECT_DIR$/src/test/java/SingleChars.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SingleLineComments.java" afterPath="$PROJECT_DIR$/src/test/java/SingleLineComments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Strings.java" afterPath="$PROJECT_DIR$/src/test/java/Strings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TokenTester.java" afterPath="$PROJECT_DIR$/src/test/java/TokenTester.java" />
     </list>
     <ignored path="Universal-Tokenizer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +50,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Tokenizer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+            <state relative-caret-position="245">
+              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,14 +61,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Numbers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Numbers.java">
+      <file leaf-file-name="Strings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Strings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="640">
+              <caret line="39" column="108" selection-start-line="39" selection-start-column="108" selection-end-line="39" selection-end-column="108" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,18 +119,21 @@
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEscapedCharAfterEscaperException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEscapedCharAfterEscapeeException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEscapedCharAfterESCException.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Strings.java" />
         <option value="$PROJECT_DIR$/src/test/java/TokenTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/ForthTokenizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/ClassicTokenizer.java" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Token.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NumberToken.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/LiteralToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/StringToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Strings.java" />
         <option value="$PROJECT_DIR$/src/test/java/Numbers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/LiteralToken.java" />
+        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/com/sun/javadoc/AnnotatedType.java" />
+        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/com/sun/source/tree/UnionTypeTree.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Strings.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java" />
       </list>
     </option>
   </component>
@@ -152,6 +168,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -214,7 +232,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tokenizer" />
+              <option name="myItemId" value="dmitmel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -234,18 +252,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar!/" />
     <property name="SearchEverywhereHistoryKey" value="ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList&#10;Map&#9;PSI&#9;JAVA://java.util.Map" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -741,35 +757,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_tests - 2016.05.26 at 06h 31m 41s.xml">
+    <history-entry file="Run_tests - 2016.05.27 at 12h 32m 10s.xml">
       <configuration name="Run tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Run_tests - 2016.05.26 at 06h 31m 55s.xml">
+    <history-entry file="Run_tests - 2016.05.27 at 12h 36m 19s.xml">
       <configuration name="Run tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Run_tests - 2016.05.26 at 06h 34m 13s.xml">
+    <history-entry file="Run_tests - 2016.05.27 at 13h 48m 18s.xml">
       <configuration name="Run tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Run_tests - 2016.05.26 at 06h 36m 15s.xml">
+    <history-entry file="Run_tests - 2016.05.27 at 18h 03m 45s.xml">
       <configuration name="Run tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Run_tests - 2016.05.26 at 06h 47m 22s.xml">
-      <configuration name="Run tests" configurationId="JUnit" />
+    <history-entry file="Strings_testStringWithTripleQuotes - 2016.05.27 at 12h 32m 31s.xml">
+      <configuration name="Strings.testStringWithTripleQuotes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Run_tests - 2016.05.26 at 06h 49m 00s.xml">
-      <configuration name="Run tests" configurationId="JUnit" />
+    <history-entry file="Strings_testStringWithTripleQuotes - 2016.05.27 at 12h 33m 01s.xml">
+      <configuration name="Strings.testStringWithTripleQuotes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Run_tests - 2016.05.26 at 06h 49m 21s.xml">
-      <configuration name="Run tests" configurationId="JUnit" />
+    <history-entry file="Strings_testStringWithTripleQuotes - 2016.05.27 at 12h 33m 33s.xml">
+      <configuration name="Strings.testStringWithTripleQuotes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Strings_testParsingStringsSeparatedBySingleChars - 2016.05.26 at 06h 32m 47s.xml">
-      <configuration name="Strings.testParsingStringsSeparatedBySingleChars" configurationId="JUnit" />
+    <history-entry file="Strings_testStringWithTripleQuotes - 2016.05.27 at 12h 34m 05s.xml">
+      <configuration name="Strings.testStringWithTripleQuotes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Strings_testParsingStringsSeparatedBySingleChars - 2016.05.26 at 06h 33m 50s.xml">
-      <configuration name="Strings.testParsingStringsSeparatedBySingleChars" configurationId="JUnit" />
+    <history-entry file="Strings_testStringWithTripleQuotes - 2016.05.27 at 12h 35m 04s.xml">
+      <configuration name="Strings.testStringWithTripleQuotes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Strings_testParsingStringsSeparatedBySingleChars - 2016.05.26 at 06h 34m 04s.xml">
-      <configuration name="Strings.testParsingStringsSeparatedBySingleChars" configurationId="JUnit" />
+    <history-entry file="Strings_testStringWithTripleQuotes - 2016.05.27 at 12h 36m 05s.xml">
+      <configuration name="Strings.testStringWithTripleQuotes" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -779,17 +795,15 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23161969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24267551" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -798,6 +812,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="165" y="180" width="1655" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -843,7 +859,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="34" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -862,41 +878,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="74" column="72" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Strings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MultilineComments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -925,7 +906,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -935,7 +916,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1035,14 +1016,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEndingSeqInCommentException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEndingSeqInCommentException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
@@ -1052,28 +1033,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/TokenParseException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/TokenParseException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoClosingQuoteInStringException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoClosingQuoteInStringException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEscapedCharAfterESCException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEscapedCharAfterESCException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="100" selection-start-line="3" selection-start-column="100" selection-end-line="3" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/UnexpectedTokenException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/UnexpectedTokenException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
@@ -1103,14 +1084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Literals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1126,46 +1099,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Token.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/LiteralToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/SingleCharToken.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/SingleCharToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/StringToken.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/StringToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding>
-            <element signature="e#482#483#0" expanded="false" />
-            <element signature="e#543#544#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NumberToken.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/NumberToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,9 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding>
-            <element signature="e#4545#4546#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,14 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
-          <folding>
-            <element signature="e#2922#2923#0" expanded="false" />
-            <element signature="e#2966#2967#0" expanded="false" />
-            <element signature="e#10310#10449#0" expanded="false" />
-            <element signature="e#10448#10449#0" expanded="false" />
-            <element signature="e#11040#11204#0" expanded="false" />
-            <element signature="e#11203#11204#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1206,7 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1214,29 +1159,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Strings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Strings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Strings.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Numbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
+        <state relative-caret-position="680">
           <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1248,7 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,17 +1184,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="105" column="13" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/com/sun/javadoc/AnnotatedType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/lib/tools.jar!/com/sun/tools/javac/tree/JCTree.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="783" column="24" selection-start-line="783" selection-start-column="24" selection-end-line="783" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/com/sun/source/tree/UnionTypeTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Literals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java">
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/lib/tools.jar!/com/sun/xml/internal/xsom/XSAnnotation.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+        <state relative-caret-position="120">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/LiteralToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Strings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="39" column="108" selection-start-line="39" selection-start-column="108" selection-end-line="39" selection-end-column="108" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,7 +1290,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>GHC</last-edited>
+          <last-edited>OpenJDK Java 1.8 JDK</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1328,7 +1307,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

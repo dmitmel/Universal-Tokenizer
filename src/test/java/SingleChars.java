@@ -1,5 +1,7 @@
+import com.github.dmitmel.SingleCharToken;
+import com.github.dmitmel.Token;
+import com.github.dmitmel.Tokenizer;
 import org.junit.Test;
-import org.universal.tokenizer.*;
 
 import java.util.List;
 

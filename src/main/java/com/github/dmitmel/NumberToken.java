@@ -1,4 +1,4 @@
-package org.universal.tokenizer;
+package com.github.dmitmel;
 
 public class NumberToken extends Token {
     private double value;

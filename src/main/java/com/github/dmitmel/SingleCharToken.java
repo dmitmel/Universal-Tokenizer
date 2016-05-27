@@ -1,4 +1,4 @@
-package org.universal.tokenizer;
+package com.github.dmitmel;
 
 public class SingleCharToken extends Token {
     private char value;

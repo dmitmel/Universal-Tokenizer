@@ -1,5 +1,5 @@
+import com.github.dmitmel.*;
 import org.junit.Test;
-import org.universal.tokenizer.*;
 
 import java.util.List;
 
@@ -32,5 +32,11 @@ public class Strings extends TokenTester {
     @Test(expected = NoEscapedCharAfterESCException.class)
     public void testParsingStringWithNoCharAfterEsc() {
         new Tokenizer().toTokenList("\"str\\");
+    }
+
+    @Test
+    public void testStringWithTripleQuotes() {
+        List<Token> tokens = new Tokenizer().toTokenList("\'\'\'string\'\'\' \"\"\"string\"\"\"");
+        assertTokensEqual(tokens, new StringToken("\'\'\'string\'\'\'"), new StringToken("\"\"\"string\"\"\""));
     }
 }

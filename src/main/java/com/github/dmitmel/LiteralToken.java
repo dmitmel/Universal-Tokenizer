@@ -1,7 +1,6 @@
-package org.universal.tokenizer;
+package com.github.dmitmel;
 
 public class LiteralToken extends Token {
-
     private String value;
 
     public LiteralToken(String value, int indexInCode) {

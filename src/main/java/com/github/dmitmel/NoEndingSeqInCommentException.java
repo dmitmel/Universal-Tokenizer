@@ -1,4 +1,4 @@
-package org.universal.tokenizer;
+package com.github.dmitmel;
 
 /**
  * Exception can be thrown if multiline comment hasn't got ending sequence. For example:
