@@ -1,4 +1,4 @@
-package com.github.dmitmel;
+package com.github.dmitmel.universal.tokenizer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

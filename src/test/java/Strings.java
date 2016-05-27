@@ -1,4 +1,4 @@
-import com.github.dmitmel.*;
+import com.github.dmitmel.universal.tokenizer.*;
 import org.junit.Test;
 
 import java.util.List;

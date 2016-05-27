@@ -1,4 +1,4 @@
-package com.github.dmitmel;
+package com.github.dmitmel.universal.tokenizer;
 
 public class LiteralToken extends Token {
     private String value;

@@ -1,5 +1,5 @@
 import org.junit.Assert;
-import com.github.dmitmel.Token;
+import com.github.dmitmel.universal.tokenizer.Token;
 
 import java.util.Arrays;
 import java.util.List;

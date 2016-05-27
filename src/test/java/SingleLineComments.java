@@ -1,7 +1,7 @@
 import org.junit.Test;
-import com.github.dmitmel.LiteralToken;
-import com.github.dmitmel.Token;
-import com.github.dmitmel.Tokenizer;
+import com.github.dmitmel.universal.tokenizer.LiteralToken;
+import com.github.dmitmel.universal.tokenizer.Token;
+import com.github.dmitmel.universal.tokenizer.Tokenizer;
 
 import java.util.List;
 
