@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a835dd6c-ba53-4c2b-b98c-1b5ee8e4d80e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/LiteralToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/LiteralToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoClosingQuoteInStringException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoClosingQuoteInStringException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEndingSeqInCommentException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEndingSeqInCommentException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NoEscapedCharAfterESCException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEscapedCharAfterESCException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NumberToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NumberToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/SingleCharToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/SingleCharToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/StringToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/StringToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Token.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Token.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/TokenParseException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/TokenParseException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/UnexpectedTokenException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/UnexpectedTokenException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0-sources.jar" afterPath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0.jar" afterPath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/LiteralToken.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/LiteralToken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$1.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$State.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer$State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer.class" afterPath="$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Tokenizer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/Strings.class" afterPath="$PROJECT_DIR$/build/test/classes/Strings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Literals.java" afterPath="$PROJECT_DIR$/src/test/java/Literals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MultilineComments.java" afterPath="$PROJECT_DIR$/src/test/java/MultilineComments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Numbers.java" afterPath="$PROJECT_DIR$/src/test/java/Numbers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SingleChars.java" afterPath="$PROJECT_DIR$/src/test/java/SingleChars.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SingleLineComments.java" afterPath="$PROJECT_DIR$/src/test/java/SingleLineComments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Strings.java" afterPath="$PROJECT_DIR$/src/test/java/Strings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TokenTester.java" afterPath="$PROJECT_DIR$/src/test/java/TokenTester.java" />
-    </list>
+    <list default="true" id="a835dd6c-ba53-4c2b-b98c-1b5ee8e4d80e" name="Default" comment="" />
     <ignored path="Universal-Tokenizer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,8 +25,8 @@
       <file leaf-file-name="Tokenizer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+            <state relative-caret-position="225">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -247,6 +220,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Universal-Tokenizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Universal-Tokenizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,11 +790,11 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24267551" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24267551" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1233,8 +1224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
