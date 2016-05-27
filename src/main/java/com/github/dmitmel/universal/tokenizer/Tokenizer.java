@@ -264,7 +264,7 @@ public class Tokenizer {
 
         if (anyStringBoundsSequenceMatches()) {
             state = State.STRING;
-        } else if (DEFAULT_LITERAL_CHARS.contains(c)) {
+        } else if (DEFAULT_LITERAL_CHARS.contains(c) || additionalLiteralCharsList.contains(c)) {
             state = State.LITERAL;
         } else if (NUMBER_CHARS.contains(c)) {
             state = State.NUMBER;
