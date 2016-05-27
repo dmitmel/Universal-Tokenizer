@@ -51,7 +51,7 @@
     </target>
 
     <target name="sources">
-        <jar destfile="${dir.main.jar}/${product.name}-${product.version}-sources.jar" compress="true"
+        <jar destfile="${dir.main.jar}/${product.name}-${product.version}-sources.zip" compress="true"
              basedir="${dir.main.src}" encoding="UTF-8">
             <manifest>
                 <attribute name="Manifest-Version" value="1.0" />

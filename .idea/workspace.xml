@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a835dd6c-ba53-4c2b-b98c-1b5ee8e4d80e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/LiteralToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/NoClosingQuoteInStringException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/NoEndingSeqInCommentException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/NoEscapedCharAfterESCException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/NumberToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/SingleCharToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/StringToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/Token$Type.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/Token.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/TokenParseException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/Tokenizer$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/Tokenizer$State.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/Tokenizer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/classes/com/github/dmitmel/UnexpectedTokenException.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/LiteralToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/LiteralToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoClosingQuoteInStringException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/NoClosingQuoteInStringException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEndingSeqInCommentException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/NoEndingSeqInCommentException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NoEscapedCharAfterESCException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/NoEscapedCharAfterESCException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/NumberToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/NumberToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/SingleCharToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/SingleCharToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/StringToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/StringToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Token.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/Token.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/TokenParseException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/TokenParseException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/Tokenizer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/UnexpectedTokenException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/UnexpectedTokenException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0-sources.jar" afterPath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0.jar" afterPath="$PROJECT_DIR$/build/jar/Universal-Tokenizer-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/Literals.class" afterPath="$PROJECT_DIR$/build/test/classes/Literals.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/MultilineComments.class" afterPath="$PROJECT_DIR$/build/test/classes/MultilineComments.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/Numbers.class" afterPath="$PROJECT_DIR$/build/test/classes/Numbers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/SingleChars.class" afterPath="$PROJECT_DIR$/build/test/classes/SingleChars.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/SingleLineComments.class" afterPath="$PROJECT_DIR$/build/test/classes/SingleLineComments.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/Strings.class" afterPath="$PROJECT_DIR$/build/test/classes/Strings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test/classes/TokenTester.class" afterPath="$PROJECT_DIR$/build/test/classes/TokenTester.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Literals.java" afterPath="$PROJECT_DIR$/src/test/java/Literals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MultilineComments.java" afterPath="$PROJECT_DIR$/src/test/java/MultilineComments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Numbers.java" afterPath="$PROJECT_DIR$/src/test/java/Numbers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SingleChars.java" afterPath="$PROJECT_DIR$/src/test/java/SingleChars.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SingleLineComments.java" afterPath="$PROJECT_DIR$/src/test/java/SingleLineComments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Strings.java" afterPath="$PROJECT_DIR$/src/test/java/Strings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TokenTester.java" afterPath="$PROJECT_DIR$/src/test/java/TokenTester.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
     </list>
     <ignored path="Universal-Tokenizer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tokenizer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tokenizer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -73,6 +32,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +107,6 @@
         <option value="$PROJECT_DIR$/src/test/java/TokenTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/ForthTokenizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/ClassicTokenizer.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Token.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/NumberToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/StringToken.java" />
@@ -151,14 +119,15 @@
         <option value="$PROJECT_DIR$/src/main/java/org/universal/tokenizer/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/dmitmel/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/Tokenizer.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -186,6 +155,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,66 +223,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Universal-Tokenizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Universal-Tokenizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Universal-Tokenizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Universal-Tokenizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmitmel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="universal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tokenizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -816,9 +729,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_tests - 2016.05.27 at 12h 36m 19s.xml">
-      <configuration name="Run tests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Run_tests - 2016.05.27 at 13h 48m 18s.xml">
       <configuration name="Run tests" configurationId="JUnit" />
     </history-entry>
@@ -826,6 +736,9 @@
       <configuration name="Run tests" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Run_tests - 2016.05.27 at 18h 09m 42s.xml">
+      <configuration name="Run tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Run_tests - 2016.05.27 at 18h 25m 33s.xml">
       <configuration name="Run tests" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Strings_testStringWithTripleQuotes - 2016.05.27 at 12h 32m 31s.xml">
@@ -848,7 +761,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -863,7 +776,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24820343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25096738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1143,14 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/main/classes/org/universal/tokenizer/Token.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/dmitmel/universal/tokenizer/Token.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1298,6 +1203,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
           <caret line="39" column="108" selection-start-line="39" selection-start-column="108" selection-end-line="39" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
           <folding />
         </state>
       </provider>
