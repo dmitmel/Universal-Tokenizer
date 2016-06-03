@@ -1,4 +1,4 @@
-import com.github.dmitmel.universal.tokenizer.*;
+import github.dmitmel.universal.tokenizer.*;
 import org.junit.Test;
 
 import java.util.List;
@@ -38,5 +38,16 @@ public class Strings extends TokenTester {
     public void testStringWithTripleQuotes() {
         List<Token> tokens = new Tokenizer().toTokenList("\'\'\'string\'\'\' \"\"\"string\"\"\"");
         assertTokensEqual(tokens, new StringToken("\'\'\'string\'\'\'"), new StringToken("\"\"\"string\"\"\""));
+    }
+
+    @Test(expected = UnexpectedTokenException.class)
+    public void testStringWithDifferentBoundsSequences() {
+        new Tokenizer().toTokenList("\'str\'\'\'");
+    }
+
+    @Test
+    public void testSingleQuotesInStringWithTripleQuotes() {
+        List<Token> tokens = new Tokenizer().toTokenList("\'\'\'a\"b\'c\'\'\'");
+        assertTokensEqual(tokens, new StringToken("\'\'\'a\"b\'c\'\'\'"));
     }
 }
